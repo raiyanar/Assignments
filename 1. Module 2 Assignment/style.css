@@ -1,0 +1,68 @@
+:root {
+  background-color: #0f4c81;
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+  width: 80vw;
+  margin: 30px auto;
+}
+
+.website-logo p,
+footer p {
+  color: azure;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  font-family: cursive, tahoma;
+  background-color: darkcyan;
+  padding: 20px;
+  border: solid rgb(151, 151, 151) 1px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: violet;
+}
+
+h2 {
+  color: aquamarine;
+}
+
+button {
+  background-color: violet;
+  color: black;
+  border: solid 1px black;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 10px;
+  font-weight: 700;
+}
+
+.navigation-menu ul {
+  text-align: center;
+}
+.navigation-menu ul li {
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.navigation-menu ul li a {
+  text-decoration: none;
+  color: #0f4c81;
+  font-family: cursive, tahoma;
+  font-weight: 900;
+  margin: 10px 10px;
+  padding: 10px 10px;
+  background-color: bisque;
+  border-radius: 5px;
+}
+
+section {
+  margin: 60px auto;
+}
