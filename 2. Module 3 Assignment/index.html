@@ -1,49 +1,82 @@
 <!doctype html>
-<html lang="en">
+<html lang="bn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Profile Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="bg-white">
-      <div class="">
-        <img src="image.jpg" />
-      </div>
-      <div class="">
-        <h1>Adib Raiyan</h1>
-        <p>MERN Stack Student</p>
-        <hr />
-        <p>
-          আমি ওয়েব ডেভেলপমেন্ট শিখছি এবং নিজেকে একজন ভালো ডেভেলপার হিসেরে গড়ে
-          তুলার চেষ্টা করছি।
-        </p>
 
-        <div class="text-center">
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#"
-              class="flex rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-6 mr-1"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"
-                />
-              </svg>
-              Follow Me</a
-            >
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <!-- Card -->
+    <div
+      class="hover:shadow-xl bg-white rounded-2xl shadow-lg p-6 w-[350px] max-w-full text-center"
+    >
+      <!-- ---- PHOTO with GRADIENT BORDER (ring technique) ---- -->
+      <div class="relative inline-block">
+        <!-- Outer ring with gradient -->
+        <div
+          class="p-1 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-orange-400"
+        >
+          <!-- Inner ring (white gap) + image -->
+          <div class="p-1 rounded-full bg-white">
+            <img
+              src="https://i.pravatar.cc/150?img=02"
+              alt="Rahim Ahmed"
+              class="w-24 h-24 rounded-full object-cover"
+            />
           </div>
         </div>
+        <!-- small decorative dot (optional) -->
+        <span
+          class="absolute bottom-0 right-0 w-5 h-5 bg-green-500 border-2 border-white rounded-full"
+        ></span>
       </div>
+
+      <!-- Name -->
+      <h2 class="text-2xl font-bold mt-4">Adib Raiyan</h2>
+
+      <!-- Profession -->
+      <p class="text-gray-500 text-base">MERN Stack Student</p>
+
+      <!-- ---- DIVIDER (gradient line) ---- -->
+      <div class="my-4 flex items-center gap-3">
+        <div
+          class="flex-1 h-[2px] bg-gradient-to-r from-transparent via-purple-500 to-pink-500 rounded-full"
+        ></div>
+        <!-- optional: small diamond/icon in the middle -->
+        <span class="text-purple-400 text-xs">✦</span>
+        <div
+          class="flex-1 h-[2px] bg-gradient-to-l from-transparent via-pink-500 to-purple-500 rounded-full"
+        ></div>
+      </div>
+
+      <!-- Description -->
+      <p class="text-gray-600 text-sm mt-2 leading-relaxed">
+        আমি ওয়েব ডেভেলপমেন্ট শিখছি এবং নিজেকে একজন ভালো ডেভেলপার হিসেরে গড়ে
+        তুলার চেষ্টা করছি।
+      </p>
+
+      <!-- Button -->
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-medium rounded-lg px-6 py-2 mt-4 transition-colors duration-200 cursor-pointer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 mr-1 inline"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"
+          />
+        </svg>
+        Follow Me
+      </button>
     </div>
   </body>
 </html>
