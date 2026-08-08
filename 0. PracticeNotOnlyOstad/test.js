@@ -77,3 +77,5 @@ function simulateFestival(gates, timeBlock) {
 
 simulateFestival(morningGates, "Morning");
 simulateFestival(nightGates, "Night");
+
+// revising Build a festival crowd flow simulator 30 steps workshop
