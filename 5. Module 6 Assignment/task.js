@@ -267,6 +267,7 @@ console.log(account1.deposit(1000));
 console.log(account1.withdraw(500));
 console.log(account1.withdraw(6000));
 console.log(BankAccount.getTotalAccounts());
+
 /*
 Bonus
 static ব্যবহার করে একটি method তৈরি করার চেষ্টা করো।
