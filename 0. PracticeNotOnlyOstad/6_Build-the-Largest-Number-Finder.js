@@ -7,8 +7,8 @@ const arrOfArr = [
 
 function largestOfAll(arr) {
   const result = [];
-  for (let i = 0; i < arrOfArr.length; i++) {
-    result.push(Math.max(...arrOfArr[i]));
+  for (let i = 0; i < arr.length; i++) {
+    result.push(Math.max(...arr[i]));
   }
   return result;
 }
