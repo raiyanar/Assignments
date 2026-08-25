@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Dom Manipulation</title>
+  </head>
+  <body>
+    <!-- Part 1: DOM Manipulation -->
+    <h1 id="main-heading">My Website</h1>
+    <p class="para">Welcome to my website.</p>
+    <button id="buttonForChange">Change Text</button>
+
+    <!-- Part 2: setTimeout() -->
+    <hr />
+    <button id="button-show-para">Show Message</button>
+    <p id="show-para"></p>
+
+    <!-- Part 3: setInterval() -->
+    <hr />
+    <h2 id="counter-heading">Counter: 0</h2>
+    <button id="counter-start-btn">Start</button>
+    <button id="counter-stop-btn">Stop</button>
+
+    <!-- Part 4: Callback Function -->
+    <hr />
+
+    <script>
+      /* Part 1: DOM Manipulation */
+      const button = document.getElementById("buttonForChange");
+
+      button.addEventListener("click", function () {
+        const paragraph = document.querySelector(".para");
+        const heading = document.getElementById("main-heading");
+        heading.textContent = "Hello JavaScript";
+        paragraph.textContent = "DOM Manipulation is Easy!";
+        heading.style.color = "red";
+      });
+
+      /* Part 2: setTimeout() */
+      const buttonTwo = document.getElementById("button-show-para");
+      const paragraphTwo = document.getElementById("show-para");
+
+      buttonTwo.addEventListener("click", function () {
+        setTimeout(function () {
+          paragraphTwo.textContent = "Hello! 2 seconds completed.";
+        }, 2000);
+      });
+
+      /* Part 3: setInterval() */
+      const counterTitle = document.getElementById("counter-heading");
+      const startCount = document.getElementById("counter-start-btn");
+      const stopCount = document.getElementById("counter-stop-btn");
+      let count = 0;
+      let intervalId = null;
+
+      startCount.addEventListener("click", function () {
+        if (intervalId === null) {
+          intervalId = setInterval(function () {
+            count++;
+            counterTitle.textContent = "Counter: " + count;
+          }, 1000);
+        }
+      });
+
+      stopCount.addEventListener("click", function () {
+        clearInterval(intervalId);
+        intervalId = null;
+      });
+
+      /* Part 4: Callback Function */
+      function greet(name, callback) {
+        console.log("Hello " + name);
+        callback();
+      }
+
+      function callbackFunction() {
+        console.log("Welcome to JavaScript");
+      }
+
+      greet("Amit", callbackFunction);
+    </script>
+  </body>
+</html>
+
+<!-- 
+Part 1: DOM Manipulation
+আপনি একটি HTML page তৈরি করবেন যেখানে থাকবে—
+একটি heading
+একটি paragraph
+একটি button
+কাজ
+Button-এ click করলে আপনি JavaScript দিয়ে:
+Heading-এর text পরিবর্তন করবেন।
+Paragraph-এর text পরিবর্তন করবেন।
+Heading-এর color পরিবর্তন করবেন।
+Example
+প্রথমে:
+My Website
+Welcome to my website
+[Change Text]
+Button-এ click করার পর:
+Hello JavaScript
+DOM Manipulation is Easy!
+[Change Text]
+ব্যবহার করবেন
+getElementById()
+querySelector()
+textContent
+style
+addEventListener()
+-->
+
+<!-- 
+Part 2: setTimeout()
+একটি button তৈরি করুন।
+[Show Message]
+Button-এ click করলে 2 seconds পরে নিচের message দেখাবেন:
+Hello! 2 seconds completed.
+ব্যবহার করবেন
+setTimeout()
+-->
+
+<!--  
+Part 3: setInterval()
+একটি simple counter তৈরি করুন।
+Counter: 0
+[Start]
+[Stop]
+কাজ
+Start button চাপলে প্রতি 1 second পর counter 1 করে বাড়বে।
+Counter: 1
+Counter: 2
+Counter: 3
+Counter: 4
+...
+Stop button চাপলে counter বন্ধ হবে।
+ব্যবহার করবেন
+setInterval()
+clearInterval()
+-->
+
+<!--  
+Part 4: Callback Function
+একটি function তৈরি করুন:
+function greet(name, callback) {
+    // আপনার code
+}
+Function call করলে:
+greet("Amit", callbackFunction);
+Output:
+Hello Amit
+Welcome to JavaScript
+শর্ত
+আপনাকে একটি callback function ব্যবহার করতে হবে।
+-->
+
+<!--  
+Submission Rules
+GitHub Repository Link জমা দিতে হবে।  GitHub  লিংক না পেলে আপনি 0 পাবেন
+এসাইনমেন্ট সাবমিশন গাইডলাইন
+এসাইনমেন্ট এর জন্য লাইভ ক্লাস ও মডিউলের প্রিরেকর্ডেড ভিডিও গুলো ফলো করবেন।
+Submission Rules
+GitHub Repository Link জমা দিতে হবে।  GitHub  লিংক না পেলে আপনি 0 পাবেন
+-->
