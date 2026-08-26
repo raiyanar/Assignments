@@ -1,3 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 8 Assignment</title>
+  </head>
+  <body>
+    <!-- Task 1: Change Text -->
+
+    <h1 id="heading-to-change">Text to be changed.</h1>
+    <button id="heading-change-btn">Change Text</button>
+    <hr />
+
+    <!-- Task 2: Change Paragraph -->
+    <p id="para-to-change">I am learning JavaScript.</p>
+    <button id="para-change-btn">Change Paragraph</button>
+    <hr />
+
+    <!-- Task 3: Show & Hide -->
+    <p id="para-to-hide">Text to be hidden or shown.</p>
+    <button id="hide-btn">Hide Paragraph</button>
+    <button id="show-btn">Show Paragraph</button>
+    <hr />
+
+    <!-- Task 4: Change Background Color -->
+    <div id="background-div">Background color to be changed.</div>
+    <button id="background-btn">Change Background Color</button>
+    <hr />
+
+    <!-- Task 5: Increase Number -->
+    <h4 id="counter">Number: 0</h4>
+    <button id="increase">Increase Button</button>
+    <hr />
+
+    <!-- Task 6: Decrease Number -->
+    <h4 id="counter-neg">Number: 10</h4>
+    <button id="decrease">Decrease Button</button>
+    <hr />
+
+    <!-- Task 7: Counter -->
+    <h4 id="counter-both">Number: 0</h4>
+    <button id="dec">Decrease</button>
+    <button id="inc">Increase</button>
+    <button id="reset">Reset</button>
+    <hr />
+
+    <!-- Task 8: Input Value Show -->
+    <input type="text" name="name" placeholder="write your name" id="my-name" />
+    <button id="show-name">Show Name</button>
+    <h3 id="name-head"></h3>
+    <hr />
+
+    <!-- Task 9: Change Image -->
+    <button id="change-img">Change Image</button>
+    <br />
+    <br />
+    <img
+      id="image-one"
+      height="100"
+      width="150"
+      src="img1.jpg"
+      alt="random image"
+    />
+    <hr />
+
+    <!-- Task 10: Change Text Color -->
+    <p id="change-p-color">Text color to be changed.</p>
+    <button id="color-change-btn">Change Text Color</button>
+    <hr />
+
+    <!-- Task 11: Simple Login Check -->
+    <input type="text" name="username" id="username" placeholder="username" />
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="password"
+    />
+    <button id="login-button">Log In Button</button>
+    <p id="login-alert"></p>
+    <hr />
+
+    <!-- Task 12: Age Check -->
+    <input
+      type="number"
+      placeholder="type your age to check"
+      name="age"
+      id="my-age"
+    />
+    <button id="age-check-btn">Voting Eligibility Check</button>
+    <h3 id="age-alert"></h3>
+    <hr />
+
+    <!-- Task 13: Add Two Numbers -->
+    <input
+      type="number"
+      placeholder="put a number to add"
+      name="input-one"
+      id="first-input"
+    />
+    <input
+      type="number"
+      placeholder="put a number to add"
+      name="input-two"
+      id="second-input"
+    />
+    <button id="add-button">Add</button>
+    <h4 id="result-text">Result:</h4>
+    <hr />
+
+    <!-- Task 14: Even or Odd -->
+    <input
+      type="number"
+      name="odd-even"
+      id="odd-even"
+      placeholder="insert a number"
+    />
+    <button id="odd-even-btn">Check odd / even</button>
+    <h3 id="odd-even-alert"></h3>
+    <hr />
+
+    <!-- Task 15: Simple To-Do List -->
+    <input
+      type="text"
+      placeholder="write your task to add"
+      name="task"
+      id="task"
+    />
+    <button id="add-task-btn">Add Task</button>
+    <ul id="task-list"></ul>
+    <hr />
+    <br />
+
+    <script>
+      /* Task 1: Change Text */
+      const headingOne = document.getElementById("heading-to-change");
+      const buttonOne = document.getElementById("heading-change-btn");
+
+      buttonOne.addEventListener("click", function () {
+        headingOne.textContent = "Hello JavaScript";
+      });
+
+      /* Task 2: Change Paragraph */
+      const paraOne = document.getElementById("para-to-change");
+      const buttonTwo = document.getElementById("para-change-btn");
+
+      buttonTwo.addEventListener("click", function () {
+        paraOne.textContent = "I love JavaScript.";
+      });
+
+      /* Task 3: Show & Hide */
+      const paraTwo = document.getElementById("para-to-hide");
+      const hideBtn = document.getElementById("hide-btn");
+      const showBtn = document.getElementById("show-btn");
+
+      function toggleOff(element) {
+        element.style.display = "none";
+      }
+      function toggleOn(element) {
+        element.style.display = "block";
+      }
+
+      hideBtn.addEventListener("click", function () {
+        toggleOff(paraTwo);
+      });
+      showBtn.addEventListener("click", function () {
+        toggleOn(paraTwo);
+      });
+
+      /* Task 4: Change Background Color */
+      const backBtn = document.getElementById("background-btn");
+      const backDiv = document.getElementById("background-div");
+      backBtn.addEventListener("click", function () {
+        backDiv.style.backgroundColor = "yellow";
+      });
+
+      /* Task 5: Increase Number */
+      const counter = document.getElementById("counter");
+      const increase = document.getElementById("increase");
+      let count = 0;
+      increase.addEventListener("click", function () {
+        count++;
+        counter.textContent = "Number: " + count;
+      });
+
+      /* Task 6: Decrease Number */
+      const counterNeg = document.getElementById("counter-neg");
+      const decrease = document.getElementById("decrease");
+      let countNeg = 10;
+      decrease.addEventListener("click", function () {
+        countNeg--;
+        counterNeg.textContent = "Number: " + countNeg;
+      });
+
+      /* Task 7: Counter */
+      const counterBoth = document.getElementById("counter-both");
+      const inc = document.getElementById("inc");
+      const dec = document.getElementById("dec");
+      const reset = document.getElementById("reset");
+      let initialValue = 0;
+
+      dec.addEventListener("click", function () {
+        initialValue--;
+        counterBoth.textContent = "Number: " + initialValue;
+      });
+
+      inc.addEventListener("click", function () {
+        initialValue++;
+        counterBoth.textContent = "Number: " + initialValue;
+      });
+
+      reset.addEventListener("click", function () {
+        initialValue = 0;
+        counterBoth.textContent = "Number: " + initialValue;
+      });
+
+      /* Task 8: Input Value Show */
+      const myName = document.getElementById("my-name");
+      const nameBtn = document.getElementById("show-name");
+      const nameHead = document.getElementById("name-head");
+
+      nameBtn.addEventListener("click", function () {
+        let typed = myName.value.toUpperCase();
+        nameHead.textContent = "Hello " + typed;
+      });
+
+      /* Task 9: Change Image */
+      const imgOne = document.getElementById("image-one");
+      const changeImgBtn = document.getElementById("change-img");
+      changeImgBtn.addEventListener("click", function () {
+        imgOne.src = "img2.jpg";
+      });
+
+      /* Task 10: Change Text Color */
+      const coloredText = document.getElementById("change-p-color");
+      const colorBtn = document.getElementById("color-change-btn");
+      colorBtn.addEventListener("click", function () {
+        coloredText.style.color = "red";
+      });
+
+      /* Task 11: Simple Login Check */
+      const loginBtn = document.getElementById("login-button");
+      const paraAlert = document.getElementById("login-alert");
+
+      loginBtn.addEventListener("click", function () {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        if (username === "admin" && password === "1234") {
+          paraAlert.textContent = "Login Successful";
+        } else {
+          paraAlert.textContent = "Invalid Username or Password";
+        }
+      });
+
+      /* Task 12: Age Check */
+      const myAge = document.getElementById("my-age");
+      const ageCheckBtn = document.getElementById("age-check-btn");
+      const ageAlertText = document.getElementById("age-alert");
+      ageCheckBtn.addEventListener("click", function () {
+        if (myAge.value >= 18) {
+          ageAlertText.textContent = "You can vote.";
+        } else {
+          ageAlertText.textContent = "You cannot vote.";
+        }
+      });
+
+      /* Task 13: Add Two Numbers */
+      const numOne = document.getElementById("first-input");
+      const numTwo = document.getElementById("second-input");
+      const addBtn = document.getElementById("add-button");
+      const resultText = document.getElementById("result-text");
+
+      addBtn.addEventListener("click", function () {
+        let result = Number(numOne.value) + Number(numTwo.value);
+        resultText.textContent = "Result: " + result;
+      });
+
+      /* Task 14: Even or Odd */
+      const oddEvenBtn = document.getElementById("odd-even-btn");
+      const oddEvenAlert = document.getElementById("odd-even-alert");
+
+      oddEvenBtn.addEventListener("click", function () {
+        let number = document.getElementById("odd-even").value;
+        if (number % 2 === 0) {
+          oddEvenAlert.textContent = number + " is Even";
+        } else if (number % 2 !== 0) {
+          oddEvenAlert.textContent = number + " is Odd";
+        }
+      });
+
+      /* Task 15: Simple To-Do List */
+      const task = document.getElementById("task");
+      const taskBtn = document.getElementById("add-task-btn");
+      const taskList = document.getElementById("task-list");
+
+      taskBtn.addEventListener("click", function () {
+        const newTask = document.createElement("li");
+        newTask.textContent = task.value;
+        if (task.value === "") {
+          alert("please put some text.");
+        } else if (task.value !== "") {
+          taskList.appendChild(newTask);
+          task.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>
+
 <!-- 
 Task 1: Change Text
 একটি <h1> tag তৈরি করুন।
@@ -29,6 +339,10 @@ Task 4: Change Background Color
 একটি <div> তৈরি করুন।
 একটি button তৈরি করুন।
 Button-এ click করলে <div>-এর background color পরিবর্তন হবে।
+
+-->
+
+<!--  
 Task 5: Increase Number
 একটি number দেখান:
 0
