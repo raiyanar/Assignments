@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+#status {
+  text-align: center;
+  min-height: 20px;
+}
+
+.theme-light {
+  background-color: pink;
+}
+.theme-dark {
+  background-color: black;
+}
+.theme-green {
+  background-color: green;
+}
+
+#theme-dropdown {
+  background-color: white;
+  width: 40%;
+}
+
+[aria-live="polite"] {
+  color: red;
+  background-color: yellow;
+}
