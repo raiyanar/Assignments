@@ -1,0 +1,113 @@
+class Dessert {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+
+  showPrice() {
+    console.log(`The price of ${this.name} is $${this.price}.`);
+  }
+}
+
+const brownie = new Dessert("Brownie", 5.99);
+brownie.showPrice();
+console.log(brownie);
+
+function sayHi() {
+  console.log(this);
+}
+sayHi(); // window (non-strict)
+
+("use strict");
+function sayHiStrict() {
+  console.log(this);
+}
+sayHiStrict(); // undefined (strict)
+
+class Vehicle {
+  constructor(brand, year) {
+    this.brand = brand;
+    this.year = year;
+  }
+}
+
+class Car extends Vehicle {
+  honk() {
+    console.log("Honk! Honk!");
+  }
+}
+
+let myCar = new Car("freeCodeCamp Motors", 2019);
+console.log(myCar.brand);
+console.log(myCar.year);
+myCar.honk();
+
+const cartContainer = document.getElementById("cart-container");
+const productsContainer = document.getElementById("products-container");
+const dessertCards = document.getElementById("dessert-card-container");
+const cartBtn = document.getElementById("cart-btn");
+const clearCartBtn = document.getElementById("clear-cart-btn");
+const totalNumberOfItems = document.getElementById("total-items");
+const cartSubTotal = document.getElementById("subtotal");
+const cartTaxes = document.getElementById("taxes");
+const cartTotal = document.getElementById("total");
+const showHideCartSpan = document.getElementById("show-hide-cart");
+let isCartShowing = false;
+
+class Dessert {
+  constructor(id, name, price, category) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+    this.category = category;
+  }
+}
+
+const products = [
+  new Dessert(1, "Vanilla Cupcakes (6 Pack)", 12.99, "Cupcake"),
+  new Dessert(2, "French Macaron", 3.99, "Macaron"),
+  new Dessert(3, "Pumpkin Cupcake", 3.99, "Cupcake"),
+  new Dessert(4, "Chocolate Cupcake", 5.99, "Cupcake"),
+  new Dessert(5, "Chocolate Pretzels (4 Pack)", 10.99, "Pretzel"),
+  new Dessert(6, "Strawberry Ice Cream", 2.99, "Ice Cream"),
+  new Dessert(7, "Chocolate Macarons (4 Pack)", 9.99, "Macaron"),
+  new Dessert(8, "Strawberry Pretzel", 4.99, "Pretzel"),
+  new Dessert(9, "Butter Pecan Ice Cream", 2.99, "Ice Cream"),
+  new Dessert(10, "Rocky Road Ice Cream", 2.99, "Ice Cream"),
+  new Dessert(11, "Vanilla Macarons (5 Pack)", 11.99, "Macaron"),
+  new Dessert(12, "Lemon Cupcakes (4 Pack)", 12.99, "Cupcake"),
+];
+
+products.forEach(({ name, id, price, category }) => {
+  dessertCards.innerHTML += `
+      <div class="dessert-card">
+        <h2>${name}</h2>
+        <p class="dessert-price">$${price}</p>
+        <p class="product-category">Category: ${category}</p>
+        <button 
+          id="${id}" 
+          class="btn add-to-cart-btn">Add to cart
+        </button>
+      </div>
+    `;
+});
+
+class ShoppingCart {
+  constructor() {
+    this.items = [];
+    this.total = 0;
+    this.taxRate = 8.25;
+  }
+
+  addItem(id, products) {
+    const product = products.find((item) => item.id === id);
+    const { name, price } = product;
+    this.items.push(product);
+
+    const totalCountPerProduct = {};
+    this.items.forEach((dessert) => {
+      totalCountPerProduct[dessert.id] =
+        (totalCountPerProduct[dessert.id] || 0) + 1;
+    });
+  }
+}
