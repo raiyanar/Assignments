@@ -1,0 +1,69 @@
+function initList() {
+  return {
+    head: null,
+    length: 0,
+  };
+}
+
+function isEmpty(list) {
+  return list.length === 0;
+}
+
+function add(list, element) {
+  const node = {
+    element: element,
+    next: null,
+  };
+
+  if (isEmpty(list)) {
+    list.head = node;
+  } else {
+    let current = list.head;
+    while (current.next !== null) {
+      current = current.next;
+    }
+    current.next = node;
+  }
+
+  list.length++;
+}
+
+function remove(list, element) {
+  let previous = null;
+  let current = list.head;
+
+  while (current !== null && current.element !== element) {
+    previous = current;
+    current = current.next;
+  }
+
+  if (current === null) {
+    return;
+  }
+
+  if (previous !== null) {
+    previous.next = current.next;
+  } else {
+    list.head = current.next;
+  }
+
+  list.length--;
+}
+
+const myList = initList();
+console.log(isEmpty(myList));
+
+console.log(myList);
+add(myList, 42);
+
+console.log(myList);
+add(myList, 43);
+
+console.log(myList);
+add(myList, 44);
+
+console.log(myList);
+console.log(isEmpty(myList));
+remove(myList, 44);
+
+console.log(JSON.stringify(myList, null, 2));
