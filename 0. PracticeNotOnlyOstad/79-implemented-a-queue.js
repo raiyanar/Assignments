@@ -1,0 +1,27 @@
+function initQueue() {
+  return {
+    collection: [],
+  };
+}
+
+function enqueue(queue, element) {
+  queue.collection.push(element);
+}
+
+function dequeue(queue) {
+  if (queue.collection.length === 0) return undefined;
+  return queue.collection.shift();
+}
+
+function front(queue) {
+  if (queue.collection.length === 0) return undefined;
+  return queue.collection[0];
+}
+
+function size(queue) {
+  return queue.collection.length;
+}
+
+function isEmpty(queue) {
+  return queue.collection.length === 0;
+}
