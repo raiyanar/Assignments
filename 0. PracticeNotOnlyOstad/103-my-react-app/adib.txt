@@ -1,0 +1,10 @@
+// vite install command
+npm create vite@latest my-react-app -- --template react
+
+// dependency install command
+cd my-react-app
+npm install
+
+// running project command
+npm run dev
+http://localhost:5173/
