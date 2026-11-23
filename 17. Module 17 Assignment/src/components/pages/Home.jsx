@@ -61,8 +61,8 @@ export default function Home() {
         {/* card section */}
         <section className="bg-gray-100 py-16">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 ">
-            {cards.map((card, index) => (
-              <Card key={index} title={card.title} content={card.content} img={card.img} />
+            {cards.map((course, index) => (
+              <Card key={index} title={course.title} content={course.content} img={course.img} />
             ))}
           </div>
         </section>

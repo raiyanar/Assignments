@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f9;
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+  margin: 0;
+}
+
+main {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+#error-msg {
+  color: #e74c3c;
+  font-size: 14px;
+  min-height: 20px;
+  text-align: center;
+}
+
+#flashcard {
+  background-color: #3498db;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 24px 16px;
+  margin: 15px 0;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+#question-display {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+
+#answer-display {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+#flashcard.flipped #answer-display {
+  opacity: 1;
+}
+
+#delete-btn {
+  display: block;
+  margin: 0 auto 24px auto;
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+textarea {
+  padding: 8px;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #2ecc71;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,5 +1,6 @@
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+
   return (
     <nav className="navbar">
       <ul>
@@ -12,14 +13,12 @@ export const Navbar = () => {
         <li className="nav-item">
           <button
             aria-expanded={isOpen ? "true" : "false"}
-            onClick={() => setIsOpen(!isOpen)}
-          >
+            onClick={() => {
+              setIsOpen(!isOpen);
+            }}>
             Apps
           </button>
-          <ul
-            className={`sub-menu ${isOpen ? "sub-menu--open" : ""}`}
-            aria-label="Apps"
-          >
+          <ul className={isOpen ? "sub-menu sub-menu--open" : "sub-menu"} aria-label="Apps">
             <li>
               <a href="#">Calendar</a>
             </li>
