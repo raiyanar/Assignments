@@ -1,0 +1,28 @@
+Link: https://ostad.app/dashboard/my-courses/6a030b4cfc6eee2fab4429ee/module/6a11aa7d575f1b5e85088992/assignment/6a12f0af575f1b5e850bf07d
+
+Assignment on Module 18
+
+সংক্ষিপ্ত বিবরণ
+
+React Vite দিয়ে Blog Website তৈরি
+টেকনোলজি:
+React.js (Vite)
+Tailwind CSS
+JSONPlaceholder API
+
+কাজের বিবরণ
+আপনি React Vite এবং Tailwind CSS ব্যবহার করে একটি সুন্দর ও Responsive Blog Website তৈরি করবেন। Blog-এর Data JSONPlaceholder API থেকে সংগ্রহ করতে হবে।
+API: https://jsonplaceholder.typicode.com/posts
+
+Requirements
+Home Page-এ সব Blog Post সুন্দর Card আকারে দেখাতে হবে।
+প্রতিটি Blog Card-এ Title ও Description দেখাতে হবে।
+প্রতিটি Blog-এর জন্য Details Button রাখতে হবে।
+Details Button-এ ক্লিক করলে নির্দিষ্ট Blog-এর সম্পূর্ণ তথ্য দেখাতে হবে।
+সুন্দর Header ও Footer তৈরি করতে হবে।
+Tailwind CSS দিয়ে Responsive Design করতে হবে।
+API থেকে Data Fetch করার সময় Loading এবং Error Message দেখাতে হবে।
+
+Submission Rules: 
+Git এ  পুশ করে রিপোজিটরি লিংক দিতে হবে। অবশ্যই লিংক পাবলিক রাখতে হবে। Git Link  ছাড়া যদি আপনি সরাসরি zip আকারে জমা করেন তাহলে 0 পাবেন। 
+
