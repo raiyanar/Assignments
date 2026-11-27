@@ -1,2 +1,23 @@
 class link: https://ostad.app/dashboard/my-courses/6a030b4cfc6eee2fab4429ee/recordings?play=6b048f0ed785292b4178093f
 course link: https://coddy.tech/landing/nextjs
+
+Nextjs দিয়ে Blog Website তৈরি
+টেকনোলজি:
+Nextjs
+Tailwind CSS
+JSONPlaceholder API
+
+no typescript.
+
+কাজের বিবরণ
+আপনি React Vite এবং Tailwind CSS ব্যবহার করে একটি সুন্দর ও Responsive Blog Website তৈরি করবেন। Blog-এর Data JSONPlaceholder API থেকে সংগ্রহ করতে হবে।
+API: https://jsonplaceholder.typicode.com/posts
+
+Requirements
+Home Page-এ সব Blog Post সুন্দর Card আকারে দেখাতে হবে।
+প্রতিটি Blog Card-এ Title ও Description দেখাতে হবে।
+প্রতিটি Blog-এর জন্য Details Button রাখতে হবে।
+Details Button-এ ক্লিক করলে নির্দিষ্ট Blog-এর সম্পূর্ণ তথ্য দেখাতে হবে।
+সুন্দর Header ও Footer তৈরি করতে হবে।
+Tailwind CSS দিয়ে Responsive Design করতে হবে।
+API থেকে Data Fetch করার সময় Loading এবং Error Message দেখাতে হবে।
